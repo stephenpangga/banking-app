@@ -2,9 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d05507e0-d9f1-47af-a7e6-a11bc4317981" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/swagger/repository/TransactionRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/swagger/service/TransactionService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_h2database_h2_1_4_200.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__dom4j_dom4j_1_6_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_transaction_javax_transaction_api_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_tomcat_jdbc_8_5_43.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_tomcat_juli_8_5_43.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_8_14.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_0_1_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_core_5_0_12_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_entitymanager_5_0_12_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_javax_persistence_hibernate_jpa_2_1_api_1_0_0_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_21_0_GA.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_jandex_2_0_0_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_aop_1_5_22_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_jpa_1_5_22_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_1_5_22_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_1_13_23_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_jpa_1_11_23_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aspects_4_3_25_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_4_3_25_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_4_3_25_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_4_3_25_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/swagger/configuration/BankApplicationRunnerConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/Transaction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/repository/TransactionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/repository/TransactionRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/service/TransactionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/service/TransactionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-spring.iml" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-spring.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +55,11 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.35402298" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunManager" selected="Application.Swagger2SpringBoot">
@@ -77,9 +107,39 @@
       <option name="presentableId" value="Default" />
       <updated>1589830059748</updated>
     </task>
+    <task id="LOCAL-00001" summary="added some service and repository folder">
+      <created>1590013388781</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1590013388781</updated>
+    </task>
+    <task id="LOCAL-00002" summary="added some service and repository folder">
+      <created>1590013446520</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1590013446520</updated>
+    </task>
+    <task id="LOCAL-00003" summary="added some service and repository folder">
+      <created>1590013460363</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1590013460363</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="added some service and repository folder" />
+    <option name="LAST_COMMIT_MESSAGE" value="added some service and repository folder" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="2352" y="188" key="#Project_Structure" timestamp="1590084393819">
+      <screen x="1920" y="25" width="1680" height="1010" />
+    </state>
+    <state x="2352" y="188" key="#Project_Structure/0.0.1920.1040/1920.25.1680.1010@1920.25.1680.1010" timestamp="1590084393819" />
     <state x="677" y="178" key="#Swagger2SpringBoot" timestamp="1589965886009">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -88,34 +148,40 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="224" key="#com.intellij.ide.macro.MacrosDialog/0.0.1920.1040/1920.25.1680.1010@0.0.1920.1040" timestamp="1589965874099" />
-    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser" timestamp="1589830107744">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.25.1680.1010@0.0.1920.1040" timestamp="1589830107744" />
-    <state x="2544" y="104" key="CommitChangelistDialog2" timestamp="1590013388106">
+    <state x="2589" y="254" key="#com.intellij.ide.util.MemberChooser" timestamp="1590082397488">
       <screen x="1920" y="25" width="1680" height="1010" />
     </state>
+    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.25.1680.1010@0.0.1920.1040" timestamp="1589830107744" />
+    <state x="2589" y="254" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.25.1680.1010@1920.25.1680.1010" timestamp="1590082397488" />
+    <state x="713" y="81" key="CommitChangelistDialog2" timestamp="1590013459811">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="713" y="81" key="CommitChangelistDialog2/0.0.1920.1040/1920.25.1680.1010@0.0.1920.1040" timestamp="1590013459811" />
     <state x="2544" y="104" key="CommitChangelistDialog2/0.0.1920.1040/1920.25.1680.1010@1920.25.1680.1010" timestamp="1590013388106" />
-    <state width="1877" height="266" key="GridCell.Tab.0.bottom" timestamp="1590013435884">
+    <state x="2540" y="285" key="FileChooserDialogImpl" timestamp="1590072355285">
+      <screen x="1920" y="25" width="1680" height="1010" />
+    </state>
+    <state x="2540" y="285" key="FileChooserDialogImpl/0.0.1920.1040/1920.25.1680.1010@1920.25.1680.1010" timestamp="1590072355285" />
+    <state width="1877" height="266" key="GridCell.Tab.0.bottom" timestamp="1590013513506">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="266" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.25.1680.1010@0.0.1920.1040" timestamp="1590013435884" />
-    <state width="1877" height="266" key="GridCell.Tab.0.center" timestamp="1590013435883">
+    <state width="1877" height="266" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.25.1680.1010@0.0.1920.1040" timestamp="1590013513506" />
+    <state width="1877" height="266" key="GridCell.Tab.0.center" timestamp="1590013513506">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="266" key="GridCell.Tab.0.center/0.0.1920.1040/1920.25.1680.1010@0.0.1920.1040" timestamp="1590013435883" />
-    <state width="1877" height="266" key="GridCell.Tab.0.left" timestamp="1590013435883">
+    <state width="1877" height="266" key="GridCell.Tab.0.center/0.0.1920.1040/1920.25.1680.1010@0.0.1920.1040" timestamp="1590013513506" />
+    <state width="1877" height="266" key="GridCell.Tab.0.left" timestamp="1590013513506">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="266" key="GridCell.Tab.0.left/0.0.1920.1040/1920.25.1680.1010@0.0.1920.1040" timestamp="1590013435883" />
-    <state width="1877" height="266" key="GridCell.Tab.0.right" timestamp="1590013435883">
+    <state width="1877" height="266" key="GridCell.Tab.0.left/0.0.1920.1040/1920.25.1680.1010@0.0.1920.1040" timestamp="1590013513506" />
+    <state width="1877" height="266" key="GridCell.Tab.0.right" timestamp="1590013513506">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="266" key="GridCell.Tab.0.right/0.0.1920.1040/1920.25.1680.1010@0.0.1920.1040" timestamp="1590013435883" />
-    <state x="613" y="339" key="com.intellij.ide.util.TipDialog" timestamp="1589965705914">
+    <state width="1877" height="266" key="GridCell.Tab.0.right/0.0.1920.1040/1920.25.1680.1010@0.0.1920.1040" timestamp="1590013513506" />
+    <state x="613" y="339" key="com.intellij.ide.util.TipDialog" timestamp="1590070733805">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="613" y="339" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/1920.25.1680.1010@0.0.1920.1040" timestamp="1589965705914" />
+    <state x="613" y="339" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/1920.25.1680.1010@0.0.1920.1040" timestamp="1590070733805" />
     <state x="2456" y="354" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/1920.25.1680.1010@1920.25.1680.1010" timestamp="1589965658872" />
   </component>
 </project>
