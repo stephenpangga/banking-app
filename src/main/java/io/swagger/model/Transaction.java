@@ -1,19 +1,20 @@
 package io.swagger.model;
 
 import java.util.Objects;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import org.springframework.validation.annotation.Validated;
-import javax.validation.Valid;
-import javax.validation.constraints.*;
+import javax.persistence.*;
 
 /**
  * Transaction
  */
 @Validated
+@Entity
 @javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-05-18T19:26:09.389Z[GMT]")
 public class Transaction   {
   @JsonProperty("sender")
@@ -26,6 +27,14 @@ public class Transaction   {
   private Double amount = null;
 
   public Transaction() {
+  }
+
+  public Transaction(String sender, String recipient, Double amount, TransactionTypeEnum transactionType, Integer userPerforming) {
+    this.sender = sender;
+    this.recipient = recipient;
+    this.amount = amount;
+    this.transactionType = transactionType;
+    this.userPerforming = userPerforming;
   }
 
   public Transaction(String sender, String recipient, Double amount, TransactionTypeEnum transactionType, Integer transactionId, Integer userPerforming) {
@@ -73,6 +82,9 @@ public class Transaction   {
   private TransactionTypeEnum transactionType = null;
 
   @JsonProperty("transaction_id")
+  @Id
+  @SequenceGenerator(name = "transaction_Seq", initialValue = 0000001)
+  @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "transaction_Seq")
   private Integer transactionId = null;
 
   @JsonProperty("userPerforming")

@@ -3,8 +3,10 @@ package io.swagger.api;
 import io.swagger.model.Transaction;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.swagger.annotations.*;
+import io.swagger.service.TransactionService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -27,6 +29,8 @@ import java.util.Map;
 @Controller
 public class TransactionsApiController implements TransactionsApi {
 
+    @Autowired
+    private TransactionService transactionService;
     private static final Logger log = LoggerFactory.getLogger(TransactionsApiController.class);
 
     private final ObjectMapper objectMapper;
@@ -58,6 +62,7 @@ public class TransactionsApiController implements TransactionsApi {
         }
 
         //return new ResponseEntity<List<Transaction>>(HttpStatus.NOT_IMPLEMENTED);
+        /*
         System.out.println(iban);
         List<Transaction> listT =  new ArrayList<Transaction>();
         listT.add(new Transaction("NL01INHO1",
@@ -75,6 +80,8 @@ public class TransactionsApiController implements TransactionsApi {
 
         ResponseEntity<List<Transaction>> x = new ResponseEntity<List<Transaction>>(listT,HttpStatus.OK);
         return x;
+        */
+        return new ResponseEntity<List<Transaction>>(transactionService.getAllTransactions(),HttpStatus.OK);
     }
 
     public ResponseEntity<Transaction> getTransactionsById(@ApiParam(value = "",required=true) @PathVariable("transactionId") Integer transactionId
