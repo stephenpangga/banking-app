@@ -1,25 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d05507e0-d9f1-47af-a7e6-a11bc4317981" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/swagger/repository/TransactionRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/swagger/service/TransactionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="d05507e0-d9f1-47af-a7e6-a11bc4317981" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1c5t0bJcTtYnghuNFjP8PYNPEOU" />
   <component name="ProjectViewState">
@@ -32,7 +18,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
-  <component name="RunManager" selected="Application.Swagger2SpringBoot">
+  <component name="RunManager">
     <configuration name="Banking_Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="io.swagger.Banking_Application" />
       <module name="swagger-spring" />
@@ -46,22 +32,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Swagger2SpringBoot" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="io.swagger.Swagger2SpringBoot" />
-      <module name="swagger-spring" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="io.swagger.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Swagger2SpringBoot" />
         <item itemvalue="Application.Banking_Application" />
       </list>
     </recent_temporary>
@@ -80,42 +52,25 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="677" y="178" key="#Swagger2SpringBoot" timestamp="1589965886009">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="677" y="178" key="#Swagger2SpringBoot/0.0.1920.1040/1920.25.1680.1010@0.0.1920.1040" timestamp="1589965886009" />
-    <state x="740" y="224" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1589965874099">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="740" y="224" key="#com.intellij.ide.macro.MacrosDialog/0.0.1920.1040/1920.25.1680.1010@0.0.1920.1040" timestamp="1589965874099" />
     <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser" timestamp="1589830107744">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.25.1680.1010@0.0.1920.1040" timestamp="1589830107744" />
-    <state x="2544" y="104" key="CommitChangelistDialog2" timestamp="1590013388106">
-      <screen x="1920" y="25" width="1680" height="1010" />
-    </state>
-    <state x="2544" y="104" key="CommitChangelistDialog2/0.0.1920.1040/1920.25.1680.1010@1920.25.1680.1010" timestamp="1590013388106" />
-    <state width="1877" height="266" key="GridCell.Tab.0.bottom" timestamp="1590013435884">
+    <state width="1877" height="116" key="GridCell.Tab.0.bottom" timestamp="1590091651806">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="266" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.25.1680.1010@0.0.1920.1040" timestamp="1590013435884" />
-    <state width="1877" height="266" key="GridCell.Tab.0.center" timestamp="1590013435883">
+    <state width="1877" height="116" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.25.1680.1010@0.0.1920.1040" timestamp="1590091651806" />
+    <state width="1877" height="116" key="GridCell.Tab.0.center" timestamp="1590091651806">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="266" key="GridCell.Tab.0.center/0.0.1920.1040/1920.25.1680.1010@0.0.1920.1040" timestamp="1590013435883" />
-    <state width="1877" height="266" key="GridCell.Tab.0.left" timestamp="1590013435883">
+    <state width="1877" height="116" key="GridCell.Tab.0.center/0.0.1920.1040/1920.25.1680.1010@0.0.1920.1040" timestamp="1590091651806" />
+    <state width="1877" height="116" key="GridCell.Tab.0.left" timestamp="1590091651806">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="266" key="GridCell.Tab.0.left/0.0.1920.1040/1920.25.1680.1010@0.0.1920.1040" timestamp="1590013435883" />
-    <state width="1877" height="266" key="GridCell.Tab.0.right" timestamp="1590013435883">
+    <state width="1877" height="116" key="GridCell.Tab.0.left/0.0.1920.1040/1920.25.1680.1010@0.0.1920.1040" timestamp="1590091651806" />
+    <state width="1877" height="116" key="GridCell.Tab.0.right" timestamp="1590091651806">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="266" key="GridCell.Tab.0.right/0.0.1920.1040/1920.25.1680.1010@0.0.1920.1040" timestamp="1590013435883" />
-    <state x="613" y="339" key="com.intellij.ide.util.TipDialog" timestamp="1589965705914">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="613" y="339" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/1920.25.1680.1010@0.0.1920.1040" timestamp="1589965705914" />
-    <state x="2456" y="354" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/1920.25.1680.1010@1920.25.1680.1010" timestamp="1589965658872" />
+    <state width="1877" height="116" key="GridCell.Tab.0.right/0.0.1920.1040/1920.25.1680.1010@0.0.1920.1040" timestamp="1590091651806" />
   </component>
 </project>
