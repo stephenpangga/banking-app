@@ -19,6 +19,6 @@ public class TransactionService {
 
     public List<Transaction> getAllTransactions()
     {
-        return (List<Transaction>) transactionRepository.findAll();
+        return (List<Transaction>) transactionRepository.findByOrderBySender();
     }
 }

@@ -26,6 +26,24 @@ public class Transaction   {
   @JsonProperty("amount")
   private Double amount = null;
 
+  @JsonProperty("transactionType")
+  private TransactionTypeEnum transactionType = null;
+
+  @JsonProperty("transaction_id")
+  @Id
+  @SequenceGenerator(name = "transaction_seq", initialValue = 1, allocationSize = 1000000)
+  @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "transaction_seq")
+  private Integer transactionId;
+
+  @JsonProperty("userPerforming")
+  private Integer userPerforming = null;
+
+  public Transaction sender(String sender) {
+    this.sender = sender;
+    return this;
+  }
+
+
   public Transaction() {
   }
 
@@ -77,22 +95,6 @@ public class Transaction   {
       }
       return null;
     }
-  }
-  @JsonProperty("transactionType")
-  private TransactionTypeEnum transactionType = null;
-
-  @JsonProperty("transaction_id")
-  @Id
-  @SequenceGenerator(name = "transaction_Seq", initialValue = 0000001)
-  @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "transaction_Seq")
-  private Integer transactionId = null;
-
-  @JsonProperty("userPerforming")
-  private Integer userPerforming = null;
-
-  public Transaction sender(String sender) {
-    this.sender = sender;
-    return this;
   }
 
   /**
@@ -177,7 +179,7 @@ public class Transaction   {
   **/
   @ApiModelProperty(example = "488558", value = "")
   
-    public Integer getTransactionId() {
+  public Integer getTransactionId() {
     return transactionId;
   }
 

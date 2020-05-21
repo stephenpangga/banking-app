@@ -27,19 +27,19 @@ public class BankApplicationConfigurationRunner implements ApplicationRunner {
         //System.out.println("sisa is lame");
 
          List<Transaction> transactionList = Arrays.asList(
-                 new Transaction("NL01INHO1",
+                 new Transaction("NL01INHO1c",
                          "NL02INHO2",
-                         500.73,
+                         503.73,
                          Transaction.TransactionTypeEnum.TRANSFER,
                          1),
-                 new Transaction("NL01INHO1",
+                 new Transaction("NL01INHO1b",
                          "NL02INHO2",
-                         500.73,
+                         502.73,
                          Transaction.TransactionTypeEnum.TRANSFER,
                          1),
-                 new Transaction("NL01INHO1",
+                 new Transaction("NL01INHO1a",
                          "NL02INHO2",
-                         500.73,
+                         501.73,
                          Transaction.TransactionTypeEnum.WITHDRAW,
                          1)
          );
@@ -51,6 +51,8 @@ public class BankApplicationConfigurationRunner implements ApplicationRunner {
         for (Transaction transaction : transactionRepository.findAll()) {
             System.out.println(transaction);
         }
+
+
 
     }
 
