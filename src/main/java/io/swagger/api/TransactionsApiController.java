@@ -17,6 +17,9 @@ import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RequestPart;
 import org.springframework.web.multipart.MultipartFile;
+import org.threeten.bp.LocalDate;
+import org.threeten.bp.LocalDateTime;
+import org.threeten.bp.LocalTime;
 
 import javax.validation.constraints.*;
 import javax.validation.Valid;
@@ -31,6 +34,7 @@ public class TransactionsApiController implements TransactionsApi {
 
     @Autowired
     private TransactionService transactionService;
+
     private static final Logger log = LoggerFactory.getLogger(TransactionsApiController.class);
 
     private final ObjectMapper objectMapper;
@@ -43,14 +47,11 @@ public class TransactionsApiController implements TransactionsApi {
         this.request = request;
     }
 
-    public ResponseEntity<List<Transaction>> getTransactions(@ApiParam(value = "get all transaction") @Valid @RequestParam(value = "iban", required = false) String iban
-,@ApiParam(value = "show transaction depending from sender") @Valid @RequestParam(value = "Sender", required = false) String sender
-,@ApiParam(value = "show transaction depending to recipient") @Valid @RequestParam(value = "Recipient", required = false) String recipient
-,@ApiParam(value = "show transaction based on date") @Valid @RequestParam(value = "date", required = false) String date
-,@ApiParam(value = "show transaction based on max amount") @Valid @RequestParam(value = "max-amount", required = false) String maxAmount
-,@ApiParam(value = "show transaction based on min amount") @Valid @RequestParam(value = "min-amount", required = false) String minAmount
-,@ApiParam(value = "show transaction based on the user performing") @Valid @RequestParam(value = "user-performing", required = false) String userPerforming
-) {
+    public ResponseEntity getTransactions(@ApiParam(value = "get all transaction") @Valid @RequestParam(value = "iban", required = false) String iban
+    ,@ApiParam(value = "show transaction based on date") @Valid @RequestParam(value = "date", required = false) String date
+    ,@ApiParam(value = "show transaction based on max amount") @Valid @RequestParam(value = "max-amount", required = false) Double maxAmount
+    ,@ApiParam(value = "show transaction based on min amount") @Valid @RequestParam(value = "min-amount", required = false) Double minAmount)
+    {
         String accept = request.getHeader("Accept");
         if (accept != null && accept.contains("application/json")) {
             try {
@@ -60,28 +61,43 @@ public class TransactionsApiController implements TransactionsApi {
                 return new ResponseEntity<List<Transaction>>(HttpStatus.INTERNAL_SERVER_ERROR);
             }
         }
-
-        //return new ResponseEntity<List<Transaction>>(HttpStatus.NOT_IMPLEMENTED);
         /*
-        System.out.println(iban);
-        List<Transaction> listT =  new ArrayList<Transaction>();
-        listT.add(new Transaction("NL01INHO1",
-                "NL02INHO2",
-                500.73,
-                Transaction.TransactionTypeEnum.TRANSFER,
-                488558,
-                1));
-        listT.add(new Transaction("NL01INHO1",
-                "NL02INHO2",
-                500.73,
-                Transaction.TransactionTypeEnum.TRANSFER,
-                488558,
-                2));
-
-        ResponseEntity<List<Transaction>> x = new ResponseEntity<List<Transaction>>(listT,HttpStatus.OK);
-        return x;
+        if(userPerforming != null)
+        {
+            //userService.getById(userPerforming);
+        }
         */
-        return new ResponseEntity<List<Transaction>>(transactionService.getAllTransactions(),HttpStatus.OK);
+
+        //TODO filtering the param
+
+        //System.out.println(iban);
+        //return new ResponseEntity<List<Transaction>>(transactionService.getAllTransactions(),HttpStatus.OK);
+        LocalDate dayMin;
+        LocalDate dayMax;
+
+        if(minAmount == null) minAmount = 0.0;
+        if(maxAmount ==  null) maxAmount = Double.MAX_VALUE;
+        if(date == null) {
+            dayMin = LocalDate.MIN;
+            dayMax = LocalDate.now();
+        }else{
+            dayMin = LocalDate.parse(date);
+            dayMax = LocalDate.parse(date);
+        }
+
+        if(iban == null) {
+            return new ResponseEntity<List<Transaction>>(transactionService.findBy(minAmount, maxAmount, dayMin, dayMax), HttpStatus.OK);
+        }
+
+        //return new ResponseEntity<List<Transaction>>(transactionService.findBy(minAmount, maxAmount),HttpStatus.OK);
+        List<Transaction> transactions = null;
+        try {
+            transactions = transactionService.findByIbanAndDatetimeBetweenAndAmountBetween(iban, minAmount, maxAmount, dayMin, dayMax);
+            return new ResponseEntity<List<Transaction>>(transactions, HttpStatus.OK);
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.FORBIDDEN).body(e.getMessage());
+        }
+
     }
 
     public ResponseEntity<Transaction> getTransactionsById(@ApiParam(value = "",required=true) @PathVariable("transactionId") Integer transactionId
@@ -97,18 +113,22 @@ public class TransactionsApiController implements TransactionsApi {
         }
 
         //return new ResponseEntity<Transaction>(HttpStatus.NOT_IMPLEMENTED);
+        /*
         ResponseEntity<Transaction> x = new ResponseEntity<Transaction>(
                 new Transaction("NL01INHO1",
                         "NL02INHO2",
                         500.73,
                         Transaction.TransactionTypeEnum.TRANSFER,
-                        488558,
-                        1),HttpStatus.OK);
+                        1,
+                        LocalDateTime.now()),HttpStatus.OK);
         return x;
+        */
+
+        return new ResponseEntity<Transaction>(transactionService.getSpecificTransaction(transactionId),HttpStatus.OK);
     }
 
-    public ResponseEntity<Transaction> transfer(@ApiParam(value = ""  )  @Valid @RequestBody Transaction body
-) {
+    public ResponseEntity transfer(@ApiParam(value = ""  )  @Valid @RequestBody Transaction body)
+    {
         String accept = request.getHeader("Accept");
         if (accept != null && accept.contains("application/json")) {
             try {
@@ -119,9 +139,18 @@ public class TransactionsApiController implements TransactionsApi {
             }
         }
 
+        //set the date here.
+        body.setDatetime(LocalDateTime.now());
+
+        try {
+            transactionService.saveTransaction(body);
+        } catch (Exception e) {
+            //return new ResponseEntity<Transaction>(HttpStatus.BAD_REQUEST);
+            return ResponseEntity.status(HttpStatus.FORBIDDEN).body(e.getMessage());
+        }
         System.out.println("print the body");
-        System.out.println(body);
+        //System.out.println(body);
+
         return new ResponseEntity<Transaction>(HttpStatus.OK);
     }
-
 }
